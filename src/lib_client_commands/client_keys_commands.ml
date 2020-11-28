@@ -249,7 +249,7 @@ let commands version : Client_context.full Clic.command list =
          raw secret key for the default `unencrypted` scheme, the path on a \
          hardware security module, an alias for an external agent, etc.\n\
          This command gives the list of signer modules that this version of \
-         the micash client supports."
+         the Micash client supports."
       no_options
       (fixed ["list"; "signing"; "schemes"])
       (fun () (cctxt : Client_context.full) ->

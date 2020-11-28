@@ -95,7 +95,7 @@ module Contract = struct
     >>= fun dir ->
     let out = dir // sprintf "%s-initial-storage.tz" t.name in
     Running_processes.run_successful_cmdf state
-      "%s -o %s --tezos-node %s --init-storage %s"
+      "%s -o %s --micash-node %s --init-storage %s"
       (base_liquidity_command state t)
       (Caml.Filename.quote out)
       (Caml.Filename.quote tezos_node)

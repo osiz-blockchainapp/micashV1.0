@@ -359,7 +359,7 @@ let cli_term state =
                 ~doc:
                   "Use these protocol parameters instead of the generated \
                    ones (technically this invalidates most other options from \
-                   a tezos-node point of view, use at your own risk)."
+                   a micash-node point of view, use at your own risk)."
                 ~docv:"JSON-FILE" ~docs)))
   $ Protocol_kind.cmdliner_term () ~docs
 

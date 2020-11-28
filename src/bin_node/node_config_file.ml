@@ -114,7 +114,7 @@ let blockchain_network_carthagenet =
         Protocol_hash.of_b58check_exn
           "PtYuensgYBb3G3x1hLLbCmcav8ue8Kyd2khADcL5LsT5R1hcXex";
     }
-    ~chain_name:"TEZOS_ALPHANET_CARTHAGE_2019-11-28T13:02:13Z"
+    ~chain_name:"Micash_Mainnet"
     ~sandboxed_chain_name:"SANDBOXED_TEZOS"
     ~default_bootstrap_peers:
       [ "tezaria.com";
@@ -598,7 +598,7 @@ let p2p =
        (opt
           "bootstrap-peers"
           ~description:
-            "List of hosts. Micash can connect to both IPv6 and IPv4 hosts. If \
+            "List of hosts. Tezos can connect to both IPv6 and IPv4 hosts. If \
              the port is not specified, default port 9732 will be assumed."
           (list string))
        (opt

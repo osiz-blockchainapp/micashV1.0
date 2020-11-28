@@ -110,7 +110,7 @@ module Manpage = struct
     [ `S "EXAMPLES";
       `I
         ( "$(b,Reconstruct the storage of a full mode node )",
-          "./tezos-node reconstruct" ) ]
+          "./micash-node reconstruct" ) ]
 
   let man = description @ options @ examples @ Node_shared_arg.Manpage.bugs
 

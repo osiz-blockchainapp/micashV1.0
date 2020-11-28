@@ -382,7 +382,7 @@ module Commands = struct
       match all with [] -> None | _ -> Some (pp_options all) in
     Console.Prompt.unit_and_loop
       ~description:
-        (Fmt.str "Run a tezos-client command on %s"
+        (Fmt.str "Run a micash-client command on %s"
            ( match clients with
            | [] -> "NO CLIENT, so this is useless…"
            | [one] -> sprintf "the %S client." one.Tezos_client.id

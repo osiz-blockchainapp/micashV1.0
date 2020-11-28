@@ -82,7 +82,7 @@ let add_bootstrap_secret cctxt {name; sk_uri} =
   >>=? fun () ->
   Client_keys.import_secret_key ~io:(cctxt :> Client_context.io_wallet) pk_uri
   >>=? fun (pkh, public_key) ->
-  cctxt#message "Micash address added: %a" Signature.Public_key_hash.pp pkh
+  cctxt#message "Tezos address added: %a" Signature.Public_key_hash.pp pkh
   >>= fun () ->
   Client_keys.register_key cctxt ~force (pkh, pk_uri, sk_uri) ?public_key name
 

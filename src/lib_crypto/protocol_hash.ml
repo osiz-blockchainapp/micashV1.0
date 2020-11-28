@@ -28,7 +28,7 @@ include Blake2B.Make
           (struct
             let name = "Protocol_hash"
 
-            let title = "A Tezos protocol ID"
+            let title = "A Micash protocol ID"
 
             let b58check_prefix = Base58.Prefix.protocol_hash
 

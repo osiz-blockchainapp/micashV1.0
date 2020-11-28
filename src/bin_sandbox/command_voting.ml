@@ -954,7 +954,7 @@ $ Arg.(
         `P
           "To allow the test to succeed in this case, the option \
            `--winning-client-is-clueless` is required; it is meant to signal \
-           that the “winner” `tezos-client` executable (from the \
+           that the “winner” `micash-client` executable (from the \
            `--winner-client-binary` option) is expected to not understand the \
            winning protocol.";
         `Noblank;

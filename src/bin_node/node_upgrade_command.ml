@@ -73,7 +73,7 @@ module Term = struct
           else
             trace
               (failure
-                 "Fail to lock the data directory. Is a `micash-node` running?")
+                 "Fail to lock the data directory. Is a `Micash-node` running?")
             @@ Lwt_lock_file.create
                  ~unlink_on_exit:true
                  (Node_data_version.lock_file data_dir)

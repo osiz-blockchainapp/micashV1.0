@@ -223,8 +223,8 @@ module System_dependencies = struct
         >>= fun () ->
         ( if
           List.exists more ~f:(function
-            | `Missing_exec ("tezos-node", _)
-              when Caml.Sys.file_exists ("." // "tezos-node") ->
+            | `Missing_exec ("micash-node", _)
+              when Caml.Sys.file_exists ("." // "micash-node") ->
                 true
             | _ -> false)
         then
@@ -232,9 +232,9 @@ module System_dependencies = struct
             EF.(
               desc (prompt "Tip:")
                 (wf
-                   "The `tezos-node` executable is missing but there seems to \
+                   "The `Micash-node` executable is missing but there seems to \
                     be one in the current directory, maybe you can pass \
-                    `./tezos-node` with the right option (see `--help`) or \
+                    `./Micash-node` with the right option (see `--help`) or \
                     simply add `export PATH=.:$PATH` to allow unix tools to \
                     find it."))
         else return () )
@@ -264,16 +264,16 @@ module Shell_environement = struct
               (Tezos_client.client_call state c []) in
           let cmd exec = String.concat ~sep:" " (exec :: call) in
           let extra =
-            let help = "Call the tezos-client used by the sandbox." in
+            let help = "Call the micash-client used by the sandbox." in
             match Tezos_executable.get c.Tezos_client.exec with
-            | "tezos-client" -> []
+            | "micash-client" -> []
             | f when Caml.Filename.is_relative f ->
                 [(sprintf "c%d" i, cmd (Caml.Sys.getcwd () // f), help)]
             | f -> [(sprintf "c%d" i, cmd (Caml.Sys.getcwd () // f), help)]
           in
           [ ( sprintf "tc%d" i
-            , cmd "tezos-client"
-            , "Call the `tezos-client` from the path." ) ]
+            , cmd "micash-client"
+            , "Call the `micash-client` from the path." ) ]
           @ extra) in
     make ~aliases
 

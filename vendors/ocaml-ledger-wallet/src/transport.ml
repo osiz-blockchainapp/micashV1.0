@@ -93,8 +93,8 @@ module Status = struct
         Some "Either you rejected the operation or you waited long enough \
               to respond that the device rejected it for you."
     | Incorrect_class ->
-        Some "A Tezos application wasn't found on the device. Is the Tezos \
-              Wallet or Tezos Baking application open on the device? Is the \
+        Some "A Micash application wasn't found on the device. Is the Micash \
+              Wallet or Micash Baking application open on the device? Is the \
               device busy talking to another process?"
     | Security_status_unsatisfied ->
         Some "The operation was automatically rejected for security reasons. \

@@ -31,7 +31,7 @@ end)
 open Client_config
 
 let disable_disclaimer =
-  match Sys.getenv_opt "TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER" with
+  match Sys.getenv_opt "Micash_CLIENT_UNSAFE_DISABLE_DISCLAIMER" with
   | Some ("yes" | "y" | "YES" | "Y") ->
       true
   | _ ->

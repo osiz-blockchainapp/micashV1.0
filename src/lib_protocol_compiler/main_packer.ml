@@ -52,7 +52,7 @@ let () =
     | Error err ->
         Format.kasprintf
           Stdlib.failwith
-          "Failed to read TEZOS_PROTOCOL: %a"
+          "Failed to read MICASH_PROTOCOL: %a"
           pp_print_error
           err
   in

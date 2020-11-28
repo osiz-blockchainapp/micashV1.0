@@ -153,7 +153,7 @@ module Manpage = struct
   let command_description =
     "The $(b,config) command is meant to inspect and amend the configuration \
      of the Micash node. This command is complementary to manually editing the \
-     micash node configuration file. Its arguments are a subset of the \
+     Micash node configuration file. Its arguments are a subset of the \
      $(i,run) command ones."
 
   let description =

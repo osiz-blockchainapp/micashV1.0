@@ -28,7 +28,7 @@ include Blake2B.Make
           (struct
             let name = "Operation_hash"
 
-            let title = "A Tezos operation ID"
+            let title = "A Micash operation ID"
 
             let b58check_prefix = Base58.Prefix.operation_hash
 

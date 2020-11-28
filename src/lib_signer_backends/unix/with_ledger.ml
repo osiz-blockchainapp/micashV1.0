@@ -830,7 +830,7 @@ let generic_commands group =
                       (fun curve ->
                         fprintf
                           ppf
-                          "  tezos-client import secret key ledger_%s \
+                          "  micash-client import secret key ledger_%s \
                            \"ledger://%a/%a/0h/0h\""
                           ( Sys.getenv_opt "USER"
                           |> Option.unopt ~default:"user" )
@@ -931,13 +931,13 @@ let generic_commands group =
                             pkh
                       | true ->
                           cctxt#message
-                            "Micash Wallet successfully signed:@ %a."
+                            "Tezos Wallet successfully signed:@ %a."
                             Signature.pp
                             signature
                           >>= fun () -> return_unit )
                   | (true, TezBake) ->
                       failwith
-                        "Option --test-sign only works for the Micash Wallet \
+                        "Option --test-sign only works for the Tezos Wallet \
                          app."
                   | (false, _) ->
                       return_unit )
@@ -1024,7 +1024,7 @@ let baking_commands group =
               | {Ledgerwallet_tezos.Version.app_class = Tezos; _} ->
                   failwith
                     "This command (`authorize ledger ...`) only works with \
-                     the Micash Baking app"
+                     the Tezos Baking app"
               | {Ledgerwallet_tezos.Version.app_class = TezBake; major; _}
                 when major >= 2 ->
                   failwith
@@ -1119,7 +1119,7 @@ let baking_commands group =
               | {app_class = Tezos; _} ->
                   failwith
                     "This command (`setup ledger ...`) only works with the \
-                     Micash Baking app"
+                     Tezos Baking app"
               | {app_class = TezBake; major; _} when major < 2 ->
                   failwith
                     "This command (`setup ledger ...`)@ is not@ compatible@ \
@@ -1232,7 +1232,7 @@ let high_water_mark_commands group watermark_spelling =
               match version.app_class with
               | Tezos ->
                   failwith
-                    "Fatal: this operation is only valid with the Micash \
+                    "Fatal: this operation is only valid with the Tezos \
                      Baking application"
               | TezBake when (not no_legacy_apdu) && version.major < 2 ->
                   Ledger_commands.wrap_ledger_cmd (fun pp ->

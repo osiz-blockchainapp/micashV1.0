@@ -141,7 +141,7 @@ let read_proto destination final_protocol_file =
     | Error err ->
         Format.kasprintf
           Stdlib.failwith
-          "Failed to read TEZOS_PROTOCOL in %s:@ %a"
+          "Failed to read MICASH_PROTOCOL in %s:@ %a"
           source_dir
           pp_print_error
           err )

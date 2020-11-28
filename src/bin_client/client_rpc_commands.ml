@@ -23,7 +23,7 @@
 (*                                                                           *)
 (*****************************************************************************)
 
-(* Tezos Command line interface - Generic JSON RPC interface *)
+(* Micash Command line interface - Generic JSON RPC interface *)
 
 open Lwt.Infix
 open Clic
