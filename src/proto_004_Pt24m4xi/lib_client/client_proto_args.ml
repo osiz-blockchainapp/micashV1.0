@@ -36,11 +36,11 @@ let () =
     `Permanent
     ~id:"badTezArg"
     ~title:"Bad Tez Arg"
-    ~description:"Invalid \xEA\x9C\xA9 notation in parameter."
+    ~description:"Invalid Mi notation in parameter."
     ~pp:(fun ppf (arg_name, literal) ->
       Format.fprintf
         ppf
-        "Invalid \xEA\x9C\xA9 notation in parameter %s: '%s'"
+        "Invalid Mi notation in parameter %s: '%s'"
         arg_name
         literal)
     Data_encoding.(obj2 (req "parameter" string) (req "literal" string))
@@ -51,7 +51,7 @@ let () =
           None)
     (fun (parameter, literal) -> Bad_tez_arg (parameter, literal))
 
-let tez_sym = "Mi" "\xEA\x9C\xA9"
+let tez_sym = "Mi" 
 
 let bytes_parameter =
   parameter (fun _ s ->
